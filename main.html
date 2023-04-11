@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>sample</title>
+ <script src="https://kit.fontawesome.com/656c0c51cf.js" crossorigin="anonymous"></script>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+ <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+ <header class="header">
+
+ </header>
+
+ <nav class="header_nav">
+  <ul class="header_ul">
+   <li class="header_li"><a href="#works">Works</a></li>
+   <li class="header_li"><a href="#recruit">Recruit</a></li>
+   <li class="header_li"><a href="#recruit_info">Recruit info</a></li>
+   <li class="header_li"><a href="#company">Company</a></li>
+   <li class="header_li"><a href="#access">Access</a></li>
+   <li class="header_li"><a href="#contact">Contact</a></li>
+  </ul>
+ </nav>
+ <div class="openbtn1"><span></span><span></span><span></span></div>
+
+ <main>
+
+ </main>
+
+ <footer class="footer">
+
+ </footer>
+
+
+ <script src="js/jquery-3.6.3.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+ <script>
+  const swiper = new Swiper('.swiper', {
+   // Optional parameters
+   direction: 'horizontal',  //横スクロール指定
+   loop: true,
+   speed: 2000,
+   effect: 'slide',
+   spaceBetween: 20,
+   autoplay: {
+    delay: 0, // 途切れなく等速でループさせるor自動再生(cssのtransition-timing-function: linear;と合わせて設設定)
+   },
+   // centeredSlides: true,   //画像の両端に見れた画像を表示する
+
+   breakpoints: {   //600px以上で、とゆう指定
+    640: {
+     slidesPerView: 2,
+     slidesPerGloup: 2,
+    },
+   },
+
+   // If we need pagination
+   pagination: {
+    el: '.swiper-pagination',  //pagenationしたい要素につけてるクラス名を記述する
+    // type: 'fraction'   //ページャーの枚数表示の形式の指定
+   },
+
+   // Navigation arrows
+   navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+   },
+
+   // And if we need scrollbar
+   scrollbar: {
+    el: '.swiper-scrollbar',
+    hide: 'false',  //動いたときのみ下にスクロールバーを表示する
+   },
+  });
+ </script>
+ <script src="js/jquery.inview.min.js"></script>
+ <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
