@@ -9,29 +9,60 @@
   <script src="https://kit.fontawesome.com/656c0c51cf.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
 <body>
   <header class="header">
-
+    <div class="header-wrapper">
+      <div class="header-top">
+        <div class="header-logo">
+          <picture class="header-logo__img">
+            <source type="image/webp" srcset="../img/logo.webp" media="(min-width: 480px)" width="70" height="70">
+            <img src="../img/logo-sp.webp" alt="">
+          </picture>
+          <h1 >木立歯科クリニック<br><span class="logo-sub">kodachi dental clinic</span></h1>
+        </div>
+        
+        <div class="reserve-btn">
+          <a href="#">ご予約はこちら</a>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <nav class="header_nav">
-    <ul class="header_ul">
-      <li class="header_li"><a href="#works">Works</a></li>
-      <li class="header_li"><a href="#recruit">Recruit</a></li>
-      <li class="header_li"><a href="#recruit_info">Recruit info</a></li>
-      <li class="header_li"><a href="#company">Company</a></li>
-      <li class="header_li"><a href="#access">Access</a></li>
-      <li class="header_li"><a href="#contact">Contact</a></li>
+  <div class="global">
+  <nav class="global-nav">
+    <ul class="global-ul">
+      <li class="global-li1"><a href="#concept">当院について</a>
+        <ul class="sub-menu">
+          <li class="sub-menu__li"><a href="">院内写真</a></li>
+          <li class="sub-menu__li"><a href="">会社概要</a></li>
+        </ul>
+      </li>
+      <li class="global-li2"><a href="#medical">診療内容</a>
+        <ul class="sub-menu">
+          <li class="sub-menu__li"><a href="">機材を使用した丁寧な検査</a></li>
+          <li class="sub-menu__li"><a href="">虫歯を繰り返さない対策</a></li>
+          <li class="sub-menu__li"><a href="">3か月に一度の歯の健康診断</a></li>
+        </ul>
+      </li>
+      <li><a href="#voice">皆様のお声</a></li>
+      <li><a href="#news">お知らせ</a></li>
+      <li><a href="#access">アクセス</a></li>
+      <li><a href="#contact">お問合せ</a></li>
     </ul>
   </nav>
-  <div class="openbtn1"><span></span><span></span><span></span></div>
+  </div>
+  <div class="hum"><span></span><span></span><span></span></div>
 
   <main>
-
+    <div class="contact-fv"></div>
+    </div>
   </main>
 
   <footer class="footer">
@@ -39,7 +70,7 @@
   </footer>
 
 
-  <script src="js/jquery-3.6.3.min.js"></script>
+  <script src="../js/jquery-3.6.3.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script>
     const swiper = new Swiper('.swiper', {
@@ -80,8 +111,8 @@
       },
     });
   </script>
-  <script src="js/jquery.inview.min.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
+  <script src="../js/jquery.inview.min.js"></script>
+  <script type="text/javascript" src="../js/main.js"></script>
 </body>
 
 </html>

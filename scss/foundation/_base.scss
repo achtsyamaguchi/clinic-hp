@@ -1,1 +1,26 @@
 @use "../global/" as *;
+
+@use "../global/" as *;
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: $main-font;
+  color: $grey;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
