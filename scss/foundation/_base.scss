@@ -1,6 +1,5 @@
 @use "../global/" as *;
 
-
 *,
 *:before,
 *:after {
@@ -75,7 +74,6 @@ body {
   }
 }
 
-
 li {
   list-style: none;
 }
@@ -92,19 +90,17 @@ a {
   padding: 0 10px;
 }
 
-// 幕----------------
 .content-wrapper {
   opacity: 0;
 }
 
-// fadeup----------------------
 .js-fadeup {
   opacity: 0;
 }
 
 .active-fadeup {
   animation-name: fadeUpAnime;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-delay: .4s;
   animation-fill-mode: forwards;
   opacity: 0;
@@ -129,7 +125,8 @@ a {
 
 .active-right {
   animation-name: fadeUpAnime2;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
+  animation-delay: .4s;
   animation-fill-mode: forwards;
   opacity: 0
 }
@@ -146,7 +143,6 @@ a {
   }
 }
 
-// top-title---------------------
 .page-title {
   position: absolute;
   top: 50%;
@@ -162,8 +158,6 @@ a {
   }
 }
 
-
-// sec-ttl----------------------------
 h2 {
   width: max-content;
   text-align: center;

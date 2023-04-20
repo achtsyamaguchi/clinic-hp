@@ -346,7 +346,7 @@
   &-nav {
     margin-left: 5%;
 
-    @include mq(TB768) {
+    @include mq(TB1024) {
       margin-top: 5%;
     }
   }
