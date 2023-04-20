@@ -1,11 +1,15 @@
 $breakpoint: (
   PC1200: "screen and(max-width: 1200px)",
-  TB: "screen and(max-width: 1024px)",
+  PC1300: "screen and(max-width: 1300px)",
+  TB1024: "screen and(max-width: 1024px)",
+  TB800: "screen and(max-width: 800px)",
   TB768: "screen and(max-width: 768px)",
-  SP1: "screen and(max-width: 680px)",
+  SP600: "screen and(max-width: 600px)",
+  SP680: "screen and(max-width: 680px)",
   SP520: "screen and(max-width: 520px)",
   SP410: "screen and(max-width: 410px)",
-  SP2: "screen and(max-width: 375px)"
+  SP375: "screen and(max-width: 375px)",
+  SP320: "screen and(max-width: 320px)"
 );
 
 @mixin mq($bp) {

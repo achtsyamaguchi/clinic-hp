@@ -1,0 +1,174 @@
+@use "../global/" as *;
+
+.archive {
+  &-fv {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    &__img {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &-wrapper {
+    margin-top: 60px;
+  }
+
+  &-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 85%;
+    margin: 0 auto;
+
+    @include mq(TB1024) {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+    }
+
+    &__list {
+      ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+      }
+      
+      &__date {
+        display: inline-block;
+        padding: 5px 16px;
+        color: $white;
+        font-size: 14px;
+        background-color: $green;
+        
+      }
+
+      &__cat {
+        padding: 5px 16px;
+        margin-left: 25px;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 10px;
+        border: 2px solid $blue;
+        @include mq(SP680) {
+          margin-left: 0;
+          margin-top: 20px;
+        }
+      }
+
+      &__txt {
+        margin-left: 50px;
+        @include mq(SP680) {
+          margin-left: 0;
+        }
+        @include mq(SP520) {
+          display: inline-block;
+          margin-top: 20px;
+        }
+      }
+
+      li {
+        width: 100%;
+        br {
+          display: none;
+        }
+        @include mq(SP680) {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+        }
+
+        @include mq(SP520) {
+          br {
+            display: block;
+          }
+        }
+
+          &:not(:first-child) {
+            margin-top: 70px;
+          }
+      }
+    }
+
+    &__cat-list {
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      width: 25%;
+      padding: 35px 0;
+      margin-top: 40px;
+      border: 1px solid $green;
+
+      @include mq(TB1024){
+        width: 60%;
+        margin-top: 15%;
+      }
+      @include mq(SP520) {
+        width: 85%;
+        margin-top: 25%;
+      }
+
+      &__ttl {
+        font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+        font-weight: bold;
+      }
+      .cat-list {
+        li {
+          &:not(:first-child) {
+            margin-top: 10px;
+          }
+          font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+        }
+      }
+      &__img {
+        position: absolute;
+        top: -60px;
+        left: 10px;
+        width: 98px;
+        height: auto;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,424 @@
+@use "../global/" as *;
+
+.examination-time {
+  width: 60%;
+  margin: 0 auto;
+  @include mq(SP520) {
+    width: 85%;
+  }
+
+  &__ttl {
+    color: #333;
+    font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+    font-weight: bold;
+
+    &:after {
+    position: absolute;
+    top: 50%;
+    right: -25%;
+    content: "";
+    display: block;
+    width: 25px;
+    color: #209E3C;
+    border-bottom: 2px solid #209E3C;
+    @include mq(SP375) {
+      right: -20%;
+      width: 25px;
+    }
+    }
+  }
+
+  table {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 60px;
+    
+    table {
+      max-width: 100%;
+    }
+    th, td {
+      padding: 3%;
+      border-bottom: 1px solid #918215;
+      font-size: clamp(0.813rem, 0.744rem + 0.34vw, 1rem);
+    }
+  
+    th {
+      border-top: 1px solid #918215;
+      font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+      &.sat {
+        color: rgb(40, 17, 172);
+      }
+      &.sun {
+        color: #e01025;
+      }
+    }
+  }
+}
+
+.access {
+  overflow: hidden;
+  &-map {
+    margin-top: 60px;
+
+    &__container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+
+      @include mq(PC1200) {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+      }
+    }
+
+    &__left {
+      width: 60%;
+      height: auto;
+
+      @include mq(PC1200) {
+        width: 95%;
+      }
+
+      iframe {
+        width: 100%;
+        border-radius: 20px;
+      }
+    }
+
+    &__right {
+      position: relative;
+      width: 30%;
+      border: 3px solid $main;
+      border-radius: 20px;
+      margin-left: 28px;
+      padding: 5.3% 0;
+      font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+
+      @include mq(PC1200) {
+        width: 60%;
+        margin-left: 0;
+        margin-top: 150px;
+        padding: 6% 2%;
+      }
+
+      @include mq(SP520) {
+        width: 70%;
+      }
+
+      &__img {
+        position: absolute;
+        top: -60%;
+        right: -10%;
+        width: 85%;
+        height: auto;
+
+        @include mq(PC1200) {
+          width: 50%;
+          top: -55%;
+        }
+
+        @include mq(TB768) {
+          width: 80%;
+          top: -68%;
+          right: -18%;
+        }
+
+        @include mq(SP520) {
+          top: -68%;
+        }
+
+        @include mq(SP320) {
+          top: -52%;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    &__txt {
+      margin-left: 25%;
+
+      .access-company {
+        font-weight: bold;
+      }
+
+      @include mq(TB768) {
+        margin-left: 10%;
+      }
+
+      p {
+        &:not(:first-child) {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+
+  margin-top: 60px;
+
+  &-wrapper {
+    position: relative; 
+    background-image: url(../img/footer-bg.webp);
+    width: 100%;
+    height: 650px;
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
+
+    .reserve {
+
+      position: absolute; 
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      padding: 1px;
+      background-color: $white2;
+      width: 55%;
+
+      @include mq(TB1024) {
+        width: 80%;
+      }
+
+      @include mq(SP520) {
+        width: 100%;
+      }
+
+      &-wrapper {
+        position: relative;
+        margin: 0 auto;
+        padding-bottom: 18%;
+
+
+        &__txt {
+          width: 50%;
+          color: $black;
+          margin: 0 auto;
+          margin-top: 70px;
+          font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+        }
+
+        &__img {
+          position: absolute;
+          right: 15%;
+          bottom: 10%;
+          width: 19%;
+          height: auto;
+
+          @include mq(SP410) {
+            right: 8%;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  
+  &-reserve__btn {
+    margin-top: 10%;
+    display: inline-block;
+
+    background-color: $yellow;
+    border-radius: 50px;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0.5em 1em 0.5em 3.5em;
+
+    &::before {
+      position: absolute;
+      left: 20px;
+      content: "";
+      background-image: url(../img/reserve-icon.webp);
+      width: 20px;
+      height: 20px;
+      background-size: cover;
+    }
+  }
+
+  &-menu {
+    width: 100%;
+    padding: 1.3% 9%;
+    background-color: $white;
+    border-top-right-radius: 50px;
+
+    @include mq(TB1024) {
+      padding: 1.3% 2% 0 4%;
+    }
+
+    .sns {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      gap: 20px;
+
+      .icon {
+        font-size: 36px;
+      }
+    }
+  }
+
+  &-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 37px;
+    line-height: 1.5;
+
+    @include mq(TB1024) {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+
+    &__location {
+      width: 20%;
+      margin: 0 auto;
+      color: $black;
+      font-size: clamp(0.813rem, 0.79rem + 0.11vw, 0.875rem);
+
+      @include mq(TB1024) {
+        width: 35%;
+        margin: unset;
+        margin-right: auto;
+        margin-left: 5%;
+      }
+
+      @include mq(SP520) {
+        width: 60%;
+      }
+
+      &__company {
+        position: relative;
+        margin-bottom: 15px;
+        padding-left: 20px;
+        font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+        font-weight: bold;
+
+        &::before {
+          position: absolute;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+              -ms-transform: translateY(-50%);
+                  transform: translateY(-50%);
+          left: -10%;
+          display: block;
+          background-color: $blue2;
+          border-radius: 50%;
+          content: "";
+          background-image: url(../img/logo.webp);
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      &__deta {
+        margin-bottom: 15px;
+        font-size: clamp(0.813rem, 0.79rem + 0.11vw, 0.875rem);
+      }
+    }
+  }
+
+  &-nav {
+    margin-left: 5%;
+
+    @include mq(TB768) {
+      margin-top: 5%;
+    }
+  }
+
+  &-ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 45px;
+
+    &__sub {
+      li {
+        font-size: clamp(0.813rem, 0.79rem + 0.11vw, 0.875rem);
+      }
+    }
+  }
+
+  &-li {
+    color: $black;
+    font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+    font-weight: bold;
+
+    span {
+      display: inline-block;
+      margin-bottom: 15px;
+      font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem); 
+    }
+  }
+
+  &-copy {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    font-size: 14px;
+
+    @include mq(TB768) {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+
+    &__img {
+      width: 80%;
+      margin-left: auto;
+      height: auto;
+
+      @include mq(TB768) {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__item {
+      font-size: 13px;
+    }
+  }
+}
+.sub-menu li a{
+  color: $grey;
+  font-weight: 400;
+  font-size: clamp(0.813rem, 0.79rem + 0.11vw, 0.875rem);
+}

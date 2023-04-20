@@ -21,7 +21,7 @@
  */
 
 html {
-  line-height: 1.15; /* 1 */
+  
   -webkit-text-size-adjust: 100%; /* 2 */
   -webkit-tap-highlight-color: transparent; /* 3*/
 }
@@ -71,7 +71,7 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: inherit;
-  margin: 0;
+  // margin: 0;
 }
 
 /* Lists (enumeration) */
@@ -87,9 +87,9 @@ ol {
 /* Lists (definition) */
 /* ============================================ */
 
-dt {
-  font-weight: bold;
-}
+// dt {
+//   font-weight: bold;
+// }
 
 dd {
   margin-left: 0;

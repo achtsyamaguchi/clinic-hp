@@ -1,0 +1,164 @@
+@use "../global/" as *;
+
+.single {
+  &-fv {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    &__img {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &-post {
+    text-align: center;
+    margin-top: 60px;
+
+    &__ttl {
+
+      h3 {
+        font-weight: bold;
+        font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+      }
+
+      span {
+        position: relative;
+
+        &:before,
+        &:after {
+          position: absolute;
+          top: 50%;
+          content: "";
+          width: 73px;
+          border-bottom: 2px solid $green;
+
+          @include mq(SP520) {
+            width: 35px;
+          }
+        }
+
+        &::before {
+          left: -100px;
+
+          @include mq(SP520) {
+            left: -50px;
+          }
+        }
+
+        &::after {
+          right: -100px;
+
+          @include mq(SP520) {
+            right: -50px;
+          }
+        }
+      }
+    }
+
+    &__date {
+      display: inline-block;
+      padding: 5px 16px;
+      color: $white;
+      font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+      background-color: $green;
+    }
+
+    &__cat {
+      padding: 5px 16px;
+      margin-left: 15px;
+      margin-right: 100px;
+      font-weight: bold;
+      font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+      border-radius: 10px;
+      border: 2px solid $blue;
+
+      @include mq(SP520) {
+        margin-right: 0;
+      }
+
+    }
+
+    &__txt {
+      margin: 0 auto;
+      margin-top: 35px;
+      font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+
+      @include mq(TB800) {
+        width: 80%;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.breadcrumb {
+  &-ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 30px;
+    font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+    margin-top: 20px;
+    margin-left: 50px;
+
+    li {
+      position: relative;
+
+      &:nth-child(-n+2) {
+        &::after {
+          position: absolute;
+          right: -40%;
+          content: "\f105";
+          font-family: 'Font Awesome 5 Free';
+          font-weight: 900;
+        }
+      }
+    }
+  }
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+  margin-top: 50px;
+  font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+
+  &-prev {
+    position: relative;
+
+    &::before {
+      content: "\f0a8";
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      position: absolute;
+      left: -25px;
+    }
+  }
+
+  &-next {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "\f0a9";
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      right: -25px;
+    }
+  }
+}

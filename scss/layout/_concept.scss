@@ -1,0 +1,361 @@
+@use "../global/" as *;
+
+.concept {
+  &-fv {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    &__img {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &-top {
+    overflow: hidden;
+    width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+    margin-top: 60px;
+
+    @include mq(TB768) {
+      width: 60%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+
+    @include mq(SP410) {
+      width: 80%;
+    }
+
+    &__item {
+      width: 100%;
+      margin: 0 auto;
+      @include mq(TB768) {
+        width: 80%;
+        &:not(:first-child) {
+          margin-top: 10%;
+        }
+      }
+
+      &:not(:first-child) {
+        margin-left: 10%;
+      }
+
+      p {
+        margin-top: 25px;
+        font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+      }
+    }
+
+    &__img {
+      width: 100%;
+      height: auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.swiper {
+  width: 80%;
+  margin-top: 60px;
+}
+
+.swiper-container {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+
+.swiper-slide {
+  text-align: center;
+  width: 100%;
+  height: auto;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.swiper-container {
+  position: relative;
+  padding-bottom: 60px;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: -30px;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  color: $green;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding-left: 7%;
+  @include mq(TB1024) {
+    padding-left: 5%;
+  }
+  @include mq(SP520) {
+    padding-left: 0.1%;
+  }
+
+  &:after {
+    font-size: 24px;
+    @include mq(SP520) {
+      font-size: 20px;
+    }
+  }
+}
+
+.swiper-button-next {
+  position: absolute;
+  color: $green;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding-right: 7%;
+  @include mq(TB1024) {
+    padding-right: 5%;
+  }
+  @include mq(SP520) {
+    padding-right: 0.1%;
+  }
+
+  &:after {
+    font-size: 24px;
+    @include mq(SP520) {
+      font-size: 20px;
+    }
+  }
+}
+
+.swiper-pagination {
+
+  &-bullet {
+    width: 20px;
+    height: 20px;
+
+    &-active {
+      background-color: $green;
+    }
+  }
+}
+
+.cleaning {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 50px;
+  @include mq(TB1024) {
+    width: 80%;
+  }
+
+  &-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    @include mq(TB768) {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+  }
+
+  &-img {
+    width: 40%;
+    height: auto;
+    @include mq(TB768) {
+      width: 60%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-txt {
+    width: 60%;
+    margin-left: 60px;
+    @include mq(TB768) {
+      width: 80%;
+      margin-top: 40px;
+      margin-left: 0;
+    }
+
+    p {
+      font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+      margin-top: 25px;
+    }
+  }
+
+  &-ttl {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0;
+    color: $black;
+    font-weight: bold;
+    font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+    text-align: left;
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      right: -70px;
+      content: "";
+      display: block;
+      width: 45px;
+      color: #209E3C;
+      border-bottom: 2px solid #209E3C;
+      @include mq(SP375) {
+        width: 25px;
+        right: -35px;
+      }
+    }
+  }
+}
+
+.director {
+  margin: 0 auto;
+  width: 50%;
+  @include mq(TB768) {
+    width: 70%;
+  }
+  &-ttl {
+    color: $black;
+    font-weight: bold;
+    font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      right: -70px;
+      content: "";
+      display: block;
+      width: 45px;
+      color: #209E3C;
+      border-bottom: 2px solid #209E3C;
+      @include mq(SP375) {
+        width: 25px;
+        right: -35px;
+      }
+    }
+  }
+
+  &-img {
+    width: 40%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 40px;
+    @include mq(TB768) {
+      width: 70%;
+    }
+
+    p {
+      text-align: center;
+      margin-top: 30px;
+      font-weight: bold;
+      font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  &-greeting {
+    margin-top: 30px;
+    p {
+      font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+    }
+  }
+}
+.director-wrapper {
+  background-image: url(../img/director-bg.webp);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  padding-bottom: 60px;
+}
+
+.company {
+  &-list {
+    width: 45%;
+    margin: 0 auto;
+    margin-top: 60px;
+    @include mq(TB768) {
+      width: 80%;
+    }
+    
+  }
+dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  @include mq(SP520) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; 
+    -webkit-box-align: center; 
+        -ms-flex-align: center; 
+            align-items: center;
+  }
+}
+dt,dd {
+  border-bottom: 1px solid $grey;
+  padding-bottom: 15px;
+  font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+  &:not(:nth-of-type(1)) {
+    padding-top: 15px
+  }
+  @include mq(SP520) {
+    &:nth-of-type(1) {
+      padding-top: 15px;
+    }
+  }
+}
+  dt {
+    width: 30%;
+    font-weight: bold;
+    color: $black;
+    @include mq(SP520) {
+      width: 100%;
+    }
+  }
+  dd {
+    font-size: clamp(0.813rem, 0.744rem + 0.34vw, 1rem);
+    width: 70%;
+  
+    @include mq(SP520) {
+      width: 100%;
+    }
+  }
+}

@@ -2,89 +2,436 @@
 <html lang="ja">
 
 <head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <title>sample</title>
- <script src="https://kit.fontawesome.com/656c0c51cf.js" crossorigin="anonymous"></script>
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
- <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>木立歯科クリニック</title>
+  <script src="https://kit.fontawesome.com/656c0c51cf.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif+JP:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
- <header class="header">
+  <div class="splashbg"></div>
+  <div class="content-wrapper">
+  <header class="header">
+    <div class="header-wrapper">
+      <div class="header-top">
+        <a href="main.html">
+          <div class="header-logo">
+            <picture class="header-logo__img">
+              <source type="image/webp" srcset="img/logo.webp" media="(min-width: 480px)" width="70" height="70">
+              <img src="img/logo-sp.webp" alt="木立歯科クリニックロゴ" loading="lazy">
+            </picture>
+            <h1>木立歯科クリニック<br><span class="logo-sub">kodachi dental clinic</span></h1>
+          </div>
+        </a>
 
- </header>
+        <div class="reserve-btn">
+          <a href="#">ご予約はこちら</a>
+        </div>
+      </div>
+    </div>
+  </header>
 
- <nav class="header_nav">
-  <ul class="header_ul">
-   <li class="header_li"><a href="#works">Works</a></li>
-   <li class="header_li"><a href="#recruit">Recruit</a></li>
-   <li class="header_li"><a href="#recruit_info">Recruit info</a></li>
-   <li class="header_li"><a href="#company">Company</a></li>
-   <li class="header_li"><a href="#access">Access</a></li>
-   <li class="header_li"><a href="#contact">Contact</a></li>
-  </ul>
- </nav>
- <div class="openbtn1"><span></span><span></span><span></span></div>
+  <div class="global">
+    <nav class="global-nav">
+      <ul class="global-ul">
+        <li class="global-li1"><a href="html/concept.html">当院について</a>
+          <ul class="sub-menu">
+            <li class="sub-menu__li"><a href="html/concept.html#company-photo">院内写真</a></li>
+            <li class="sub-menu__li"><a href="html/concept.html#company">会社概要</a></li>
+          </ul>
+        </li>
+        <li class="global-li2"><a href="html/medical.html">診療内容</a>
+          <ul class="sub-menu">
+            <li class="sub-menu__li"><a href="html/medical.html#treatment">痛くない麻酔</a></li>
+            <li class="sub-menu__li"><a href="html/medical.html#prevention">虫歯を繰り返さない対策</a></li>
+            <li class="sub-menu__li"><a href="html/medical.html#examination">3か月に一度の歯の健康診断</a></li>
+          </ul>
+        </li>
+        <li><a href="html/voice.html">皆様のお声</a></li>
+        <li><a href="html/archive.html">お知らせ</a></li>
+        <li><a href="main.html#access">アクセス</a></li>
+        <li><a href="html/contact.html">お問合せ</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="hum"><span></span><span></span><span></span></div>
 
- <main>
+  <main>
+    <section class="front">
+      <div class="front-fv fv-wrapper">
+        <picture class="front-fv__img">
+          <source type="image/webp" srcset="img/front-fv.webp" media="(min-width: 480px)" width="2880" height="1778">
+          <img src="img/front-fv-sp.webp" alt="女性歯科医が笑顔で治療行っている様子" loading="lazy">
+          <div class="front-fv__txt">
+            <div class="front-fv__ttl">
+              <h1>ずっと笑顔で暮らせるように<br><span>smile forever</span></h1>
+            </div>
+            <p>歯の健康はその人の笑顔や人生にまで影響します。<br>私達は皆様の悩みに寄り添った施術を心がけています。</p>
+          </div>
+        </picture>
+      </div>
 
- </main>
+      <h2>
+        <span class="section-ttl">Our Concept<br><span class="sub-ttl">当院について</span></span>
+      </h2>
 
- <footer class="footer">
+      <section class="front-concept wrapper">
+        <div class="front-concept__wrapper">
+          <div class="front-concept__item js-fadeup">
+            <div class="front-concept__img">
+              <img src="img/concept-person1.webp" alt="" loading="lazy">
+            </div>
+            <p class="js-faderight">当院では治療はもとより普段の正しいケアや歯の磨き方から歯垢のたまりにくいケアまで、しっかりサポートします。</p>
+          </div>
 
- </footer>
+          <div class="front-concept__item js-fadeup">
+            <div class="front-concept__img">
+              <img src="img/concept-person2.webp" alt="" loading="lazy">
+            </div>
+            <p class="js-faderight">当院では治療はもとより普段の正しいケアや歯の磨き方から歯垢のたまりにくいケアまで、しっかりサポートします。</p>
+          </div>
 
+          <div class="front-concept__item js-fadeup">
+            <div class="front-concept__img">
+              <img src="img/concept-person3.webp" alt="" loading="lazy">
+            </div>
+            <p class="js-faderight">当院では治療はもとより普段の正しいケアや歯の磨き方から歯垢のたまりにくいケアまで、しっかりサポートします。</p>
+          </div>
+        </div>
+        <div class="more-btn">
+          <a href="html/concept.html">More</a>
+        </div>
+      </section>
 
- <script src="js/jquery-3.6.3.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
- <script>
-  const swiper = new Swiper('.swiper', {
-   // Optional parameters
-   direction: 'horizontal',  //横スクロール指定
-   loop: true,
-   speed: 2000,
-   effect: 'slide',
-   spaceBetween: 20,
-   autoplay: {
-    delay: 0, // 途切れなく等速でループさせるor自動再生(cssのtransition-timing-function: linear;と合わせて設設定)
-   },
-   // centeredSlides: true,   //画像の両端に見れた画像を表示する
+      <section class="front-medical wrapper">
+        <h2>
+          <span class="section-ttl">Medical Treatment<br><span class="sub-ttl">診療内容について</span></span>
+        </h2>
 
-   breakpoints: {   //600px以上で、とゆう指定
-    640: {
-     slidesPerView: 2,
-     slidesPerGloup: 2,
-    },
-   },
+        <div class="front-medical__wrapper">
+          <div class="front-medical__left">
+            <div class="front-medical__left__img">
+              <picture>
+                <source type="image/webp" srcset="img/front-medical.webp" media="(min-width: 480px)" width="1120"
+                  height="750">
+                <img src="img/front-medical-sp1.webp" alt="歯科の検査器具" loading="lazy">
+              </picture>
+              <div class="front-medical__logo">
+                <img src="img/ha-hamigaki.webp" alt="">
+              </div>
+            </div>
+            <span>機材を使用した丁寧な検査</span>
+          </div>
 
-   // If we need pagination
-   pagination: {
-    el: '.swiper-pagination',  //pagenationしたい要素につけてるクラス名を記述する
-    // type: 'fraction'   //ページャーの枚数表示の形式の指定
-   },
+          <div class="front-medical__right">
+            <div class="front-medical__right__img">
+              <picture>
+                <source type="image/webp" srcset="img/front-medical2.webp" media="(min-width: 480px)" width="1120"
+                  height="750">
+                <img src="img/front-medical-sp2.webp" alt="女性歯科医がファミリーに歯の模型使用して説明している様子" loading="lazy">
+              </picture>
+              <div class="front-medical__logo">
+                <img src="img/ha-hamigaki.webp" alt="" loading="lazy">
+              </div>
+            </div>
+            <span>虫歯を繰り返さない対策</span>
+          </div>
+        </div>
+        <div class="more-btn front-medical__btn">
+          <a href="html/medical.html">More</a>
+        </div>
+      </section>
 
-   // Navigation arrows
-   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-   },
+      <section class="front-customer wrapper">
+        <h2>
+          <span class="section-ttl">Customer Reviews<br><span class="sub-ttl">皆様のお声</span></span>
+        </h2>
 
-   // And if we need scrollbar
-   scrollbar: {
-    el: '.swiper-scrollbar',
-    hide: 'false',  //動いたときのみ下にスクロールバーを表示する
-   },
-  });
- </script>
- <script src="js/jquery.inview.min.js"></script>
- <script type="text/javascript" src="js/main.js"></script>
+        <div class="front-customer__wrapper">
+          <div class="front-customer__voice">
+            <div class="front-customer__img js-fadeup">
+              <picture>
+                <source type="image/webp" srcset="img/front-voice.webp" media="(min-width: 480px)" width="1120"
+                  height="624">
+                <img src="img/front-voice-sp.webp" alt="高齢者の夫婦がスマホを笑顔で見ている様子" loading="lazy">
+              </picture>
+            </div>
+            <p class="js-faderight">
+              この5年のうちに歯の細りが気になり始め、ついでに旦那も一緒に診察を受けさせてもらいました。<br>割と健康かな？と思っていたのですが見えない箇所の問題が検査で色々わかり・・・丁寧で親切な対応で不安なく迅速に治療をうけれました。今では定期的に受診して歯の健康を維持しながら楽しく日々を送れています！ありがとうございました！
+            </p>
+          </div>
+
+          <div class="front-customer__voice">
+            <div class="front-customer__img js-fadeup">
+              <picture>
+                <source type="image/webp" srcset="img/front-voice2.webp" media="(min-width: 480px)" width="1120"
+                  height="624">
+                <img src="img/front-voice-sp2.webp" alt="笑顔の若い夫婦と子供" loading="lazy">
+              </picture>
+            </div>
+            <p class="js-faderight">
+              この5年のうちに歯の細りが気になり始め、ついでに旦那も一緒に診察を受けさせてもらいました。<br>割と健康かな？と思っていたのですが見えない箇所の問題が検査で色々わかり・・・丁寧で親切な対応で不安なく迅速に治療をうけれました。今では定期的に受診して歯の健康を維持しながら楽しく日々を送れています！ありがとうございました！
+            </p>
+          </div>
+        </div>
+        <div class="more-btn">
+          <a href="html/voice.html">More</a>
+        </div>
+      </section>
+
+      <section class="front-news wrapper">
+        <h2>
+          <span class="section-ttl">News<br><span class="sub-ttl">お知らせ</span></span>
+        </h2>
+
+        <div class="front-news__wrapper">
+          <ul class="front-news__ul">
+            <li>
+              <span class="date"><time datetaime="2023-3-15">2023年3月15日</time></span>
+              <span class="cat">Aについて</span>
+              <span class="post">4月の臨時休診日について</span>
+            </li>
+
+            <li>
+              <span class="date"><time datetaime="2023-7-10">2023年7月10日</time></span>
+              <span class="cat">Bについて</span>
+              <span class="post">9月のお盆休診日について</span>
+            </li>
+
+            <li>
+              <span class="date"><time datetaime="2023-3-15">2023年8月10日</time></span>
+              <span class="cat">Cについて</span>
+              <span class="post">9月の歯科検診日時について</span>
+            </li>
+          </ul>
+          <div class="more-btn front-news__btn">
+            <a href="html/archive.html">More</a>
+          </div>
+        </div>
+        <div class="front-news__img">
+          <div class="front-news__img--left">
+            <img src="img/ha-hamigaki.webp" alt="" loading="lazy">
+          </div>
+          <div class="front-news__img--right">
+            <img src="img/ha-hamigaki.webp" alt="" loading="lazy">
+          </div>
+        </div>
+      </section>
+    </section>
+  
+  <section class="examination-time">
+    <h2 class="examination-time__ttl">木立歯科クリニックの診察時間</h2>
+    <table>
+      <tr>
+        <th></th>
+        <th>診療時間</th>
+        <th>月</th>
+        <th>火</th>
+        <th>水</th>
+        <th>木</th>
+        <th>金</th>
+        <th class="sat">土</th>
+        <th class="sun">日</th>
+      </tr>
+      <tr>
+        <td>午前</td>
+        <td>9:00AM~<br>11:30PM</td>
+        <td>●</td>
+        <td>●</td>
+        <td>●</td>
+        <td>●</td>
+        <td>●</td>
+        <td>●</td>
+        <td>ー</td>
+      </tr>
+      <tr>
+        <td>午後</td>
+        <td>12:00AM~<br>18:30PM</td>
+        <td>●</td>
+        <td>●</td>
+        <td>●</td>
+        <td>ー</td>
+        <td>●</td>
+        <td>ー</td>
+        <td>ー</td>
+      </tr>
+    </table>
+  </section>
+  
+  <section id="access" class="access">
+    <h2>
+      <span class="section-ttl">Access<br><span class="sub-ttl">アクセス</span>
+    </h2>
+
+    <div class="access-map">
+      <div class="access-map__container">
+        <div class="access-map__left">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3247.676506383551!2d139.61798565017082!3d35.512276446731086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1681221971626!5m2!1sja!2sjp"
+            width="765" height="430" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" loading="lazy">
+          </iframe>
+        </div>
+        <div class="access-map__right js-faderight">
+          <div class="access-map__txt">
+            <p class="access-company">木立歯科クリニック</p>
+            <p>〒000-000<br>
+              〇〇県〇〇市〇〇町1-1-1<br>
+              ヘイズバレー2階
+            </p>
+            <p>
+              〇〇駅3番出口から徒歩5分<br>
+              オークストリート前の並びです
+            </p>
+          </div>
+          <div class="access-map__right__img">
+            <picture>
+              <source type="image/webp" srcset="img/map-person.webp" media="(min-width: 480px)" width="628"
+                height="470">
+              <img src="img/map-person-sp.webp" alt="" loading="lazy">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-wrapper">
+      <section class="reserve">
+        <div class="reserve-wrapper">
+          <h2>
+            <span class="section-ttl">Reserve<br><span class="sub-ttl">予約に関するお願い</span></span>
+          </h2>
+
+          <p class="reserve-wrapper__txt">
+            ご予約方法についてはお電話ではお受けしておりませんのでご了承ください。<br>
+            予約はすべてWEB予約となっております。<br>
+            下記からお手続きをお願いいたします。
+          </p>
+
+          <div class="reserve-wrapper__img">
+            <picture>
+              <source type="image/webp" srcset="img/footer-docter.webp" media="(min-width: 480px)" width="246"
+                height="328">
+              <img src="img/footer-docter-sp.webp" alt="" loading="lazy">
+            </picture>
+          </div>
+          <div class="footer-reserve__btn">
+            <a href="#">ご予約はこちら</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="footer-menu">
+      <div class="sns">
+
+        <a href="#">
+          <div class="twitter-icon icon">
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+        </a>
+        <a href="#">
+          <div class="inta-icon icon"><i class="fa-brands fa-square-instagram"></i>
+          </div>
+        </a>
+        <a href="#">
+          <div class="line-icon icon"><i class="fa-brands fa-line"></i>
+          </div>
+        </a>
+      </div>
+
+      <div class="footer-inner">
+        <div class="footer-inner__location">
+          <p class="footer-inner__location__company"><a href="main.html">木立歯科クリニック</a></p>
+          <p class="footer-inner__location__deta">〒000-000<br>〇〇件〇〇市〇〇町1-1-1<br>ヘイズバレー2階</p>
+          <p class="footer-inner__location__tel">電話番号<br>000-0000-0000</p>
+        </div>
+
+        <nav class="footer-nav">
+          <ul class="footer-ul">
+            <li class="footer-li"><span><a href="html/concept.html">当院について</a></span>
+              <ul class="sub-menu">
+                <li><a href="html/concept.html#company-photo">院内写真</a></li>
+                <li><a href="html/concept.html#company">会社概要</a></li>
+              </ul>
+            </li>
+            <li class="footer-li"><span><a href="html/medical.html">診療内容</a></span>
+              <ul class="sub-menu">
+                <li><a href="html/medical.html#treatment">痛くない麻酔</a></li>
+                <li><a href="html/medical.html#prevention">虫歯を繰り返さない対策</a></li>
+                <li><a href="html/medical.html#examination">3カ月にいちどの歯の健康診断</a></li>
+              </ul>
+            </li>
+            <li class="footer-li"><span><a href="html/voice.html">皆様のお声</a></span></li>
+            <li class="footer-li"><span><a href="html/archive.html">お知らせ</a></span></li>
+            <li class="footer-li"><span><a href="main.html#access">アクセス</a></span></li>
+            <li class="footer-li"><span><a href="html/contact.html">お問合せ</a></span></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-copy">
+        <div class="fotter-copy__item">©kodachi clinic</div>
+
+        <picture class="footer-copy__img">
+          <source type="image/webp" srcset="img/footer-house.webp" media="(min-width: 480px)" width="1510"
+            height="212">
+          <img src="img/footer-house-sp.webp" alt="" loading="lazy">
+        </picture>
+      </div>
+    </div>
+  </footer>
+</div>
+
+  <script src="js/jquery-3.6.3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+    
+      direction: 'horizontal',  
+      loop: true,
+      speed: 2200,
+      effect: 'slide',
+      spaceBetween: 40,
+      autoplay: {
+        delay: 0, 
+      },
+
+      breakpoints: {   
+        769: {
+          slidesPerView: 3,
+          slidesPerGloup: 3,
+        },
+      },
+
+      pagination: {
+        el: '.swiper-pagination', 
+      },
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        hide: 'false',  
+      },
+    });
+  </script>
+  <script src="js/jquery.inview.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>

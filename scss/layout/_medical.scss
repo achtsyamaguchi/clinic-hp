@@ -1,0 +1,552 @@
+@use "../global/" as *;
+
+.medical {
+
+  &-fv {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    &__img {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &-flow {
+    &__ttl {
+      color: $black;
+      font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+      font-weight: bold;
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: -70px;
+        content: "";
+        display: block;
+        width: 45px;
+        color: #209E3C;
+        border-bottom: 2px solid #209E3C;
+  
+        @include mq(SP375) {
+          width: 20px;
+          right: -30px;
+        }
+      }
+
+      &::after:last-child {
+        content: none;
+      }
+    }
+
+    &__list {
+      width: 60%;
+      margin: 0 auto;
+      margin-top: 50px;
+
+      @include mq(TB1024) {
+        width: 70%;
+      }
+
+      @include mq(SP600) {
+        width: 95%;
+      }
+
+      &__item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+
+        @include mq(SP680) {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+        }
+
+        &:not(:first-child) {
+          margin-top: 60px;
+        }
+
+      }
+
+      &__img {
+        width: 30%;
+        height: auto;
+
+        @include mq(TB1024) {
+          width: 50%;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &__txt {
+        position: relative;
+        width: 60%;
+        margin-left: 30px;
+
+        @include mq(SP680) {
+          margin-left: 0;
+        }
+
+        @include mq(SP680) {
+          width: 90%;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: -50px;
+          -webkit-transform: translate(-50%);
+              -ms-transform: translate(-50%);
+                  transform: translate(-50%);
+          border-top: 30px solid $green;
+          border-right: 40px solid transparent;
+          border-left: 40px solid transparent;
+        }
+
+        p {
+          font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+          margin-top: 20px;
+        }
+
+        &__ttl {
+          color: $black;
+          font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.arrow {
+  &:last-child {
+    .medical-flow__list__txt {
+      &::after {
+        content: none;
+      }
+    }
+  }
+}
+
+.treatment {
+
+  &-ttl {
+    position: relative;
+    font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+    font-weight: bold;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: -70px;
+      content: "";
+      display: block;
+      width: 45px;
+      color: $green;
+      border-bottom: 2px solid $green;
+
+      @include mq(SP375) {
+        width: 20px;
+        right: -30px;
+      }
+    }
+  }
+
+  &-anesthesia {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 60px;
+
+    @include mq(TB1024) {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+
+
+    &__img {
+      width: 40%;
+      height: auto;
+
+      @include mq(TB1024) {
+        width: 70%;
+      }
+
+      @include mq(TB768) {
+        width: 90%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+
+        @include mq(TB1024) {
+          aspect-ratio: 336/125;
+          -o-object-fit: cover;
+             object-fit: cover;
+        }
+      }
+    }
+
+    &__txt {
+      width: 40%;
+      padding: 3.26% 3.47%;
+      border: 2px solid $blue2;
+      border-radius: 20px;
+      margin-left: -100px;
+      margin-bottom: -180px;
+      background-color: $white;
+      font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+
+      @include mq(TB1024) {
+        width: 70%;
+        margin: unset;
+        margin-top: 40px;
+      }
+
+      @include mq(TB768) {
+        width: 90%;
+      }
+    }
+  }
+
+  &-other {
+    margin-top: 9%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+    @include mq(TB768) {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+
+    &__img {
+      width: 15%;
+      height: auto;
+      @include mq(SP520) {
+        width: 25%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__txt {
+      width: 60%;
+
+      @include mq(TB768) {
+        width: 80%;
+      }
+
+      @include mq(SP600) {
+        width: 90%;
+      }
+
+      &__ttl {
+        margin-bottom: 20px;
+        font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+        font-weight: bold;
+
+        @include mq(TB768) {
+          width: 100%;
+        }
+      }
+
+      p {
+        font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+      }
+
+      .line-marker {
+        background: -o-linear-gradient(transparent 60%, rgba(255, 255, 255, 0) 60%, #ffc0cb 40%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(60%, rgba(255, 255, 255, 0)), color-stop(40%, #ffc0cb));
+        background: linear-gradient(transparent 60%, rgba(255, 255, 255, 0) 60%, #ffc0cb 40%);
+      }
+    }
+  }
+}
+
+.prevention {
+  width: 80%;
+  margin: 0 auto;
+
+  @include mq(SP680) {
+    width: 90%;
+  }
+
+  &-ttl {
+    color: $black;
+    font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+    font-weight: bold;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: -70px;
+      content: "";
+      display: block;
+      width: 45px;
+      color: #209E3C;
+      border-bottom: 2px solid #209E3C;
+
+      @include mq(SP375) {
+        width: 20px;
+        right: -30px;
+      }
+    }
+
+  }
+
+  &-point {
+    margin-top: 60px;
+    font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+  }
+
+  &-img {
+    width: 26%;
+    height: auto;
+
+    @include mq(TB768) {
+      width: 40%;
+    }
+
+    @include mq(SP600) {
+      width: 65%;
+    }
+
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+    @include mq(TB768) {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+
+    &:not(:first-child) {
+      margin-top: 4%;
+    }
+  }
+
+  &-txt {
+    width: 80%;
+    margin-left: 45px;
+
+    @include mq(TB768) {
+      width: 90%;
+      margin-left: 0;
+      margin-top: 40px;
+    }
+
+    &__inner {
+      font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+    }
+  }
+
+  &-brushing,
+  &-fluorine,
+  &-bite {
+    &__ttl {
+      font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+      font-weight: bold;
+
+      @include mq(TB768) {
+        text-align: center;
+      }
+
+      span {
+        padding: 10px 42px;
+        border: 2px solid $blue;
+        border-radius: 10px;
+      }
+    }
+
+    &__txt__inner {
+      p {
+        margin-top: 40px;
+        font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+        ;
+      }
+
+    }
+  }
+}
+
+.examination {
+
+  &-ttl {
+    color: #333;
+    font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+    font-weight: bold;
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      right: -70px;
+      content: "";
+      display: block;
+      width: 45px;
+      color: #209E3C;
+      border-bottom: 2px solid #209E3C;
+
+      @include mq(SP375) {
+        width: 20px;
+        right: -30px;
+      }
+    }
+  }
+
+  &-img {
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-txt {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 60px;
+    font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+    @include mq(TB768) {
+      width: 85%
+      ;
+    }
+  }
+
+  &-contents {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    @include mq(TB1024) {
+      width: 95%;
+    }
+
+    @include mq(SP520) {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+
+    &__ttl {
+      display: inline-block;
+      color: $black;
+      font-weight: bold;
+      font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+
+      @include mq(SP520) {
+        display: block;
+      }
+    }
+
+    &__img {
+      width: 40%;
+      height: auto;
+
+      @include mq(TB1024) {
+        width: 30%;
+      }
+
+      @include mq(SP520) {
+        width: 40%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: contain;
+           object-fit: contain;
+      }
+    }
+
+    &__txt {
+      width: 40%;
+      display: inline-block;
+
+      @include mq(SP520) {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+
+      ul {
+        display: inline-block;
+        margin-top: 4%;
+        margin-left: 3%;
+
+        @include mq(SP520) {
+          display: block;
+          margin: unset;
+          margin-top: 10%;
+        }
+
+        li {
+          font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+
+          &:not(:first-child) {
+            margin-top: 1.7%;
+          }
+        }
+      }
+    }
+  }
+}
